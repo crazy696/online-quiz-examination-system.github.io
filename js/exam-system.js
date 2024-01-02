@@ -124,6 +124,7 @@ $(function () {
                 $(`.0_user_answer_${examNum}`).css("color","green");
                 cardLi.removeClass("hasBeenAnswerMistake");
                 cardLi.addClass('hasBeenAnswer');
+                correctly++;
             } else {
                 $(`.0_user_answer_${examNum}`).css("color","red");
                 cardLi.removeClass('hasBeenAnswer');
@@ -138,7 +139,7 @@ $(function () {
                 $(`.0_user_answer_${examNum}`).css("color","green");
                 cardLi.removeClass("hasBeenAnswerMistake");
                 cardLi.addClass('hasBeenAnswer');
-                correctly++
+                correctly++;
             } else {
                 $(`.0_user_answer_${examNum}`).css("color","red");
                 cardLi.removeClass('hasBeenAnswer');
@@ -149,7 +150,6 @@ $(function () {
 
     $('#test_jiaojuan').click(function () {
         let answerList = $("#answer-sheets").children();
-        alert(correctly);
         alert(`正确率： ${correctly*100/answerList.length}%`);
     })
 
