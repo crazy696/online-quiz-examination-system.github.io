@@ -115,7 +115,7 @@ $(function () {
         var optionNum = optionID.split("_")[4];
 
         // console.log(examId, optionID, examNum, optionNum)
-        if(datas[examNum].type == "单选题") {
+        if(datas[examNum-1].type == "单选题") {
             let answer_dict = ["A", "B", "C", "D"]
             $(`.user_answer_${examNum}`).css("display","block");
             $(`#0_user_answer_${examNum}`).text(answer_dict[optionNum-1]);
@@ -149,7 +149,7 @@ $(function () {
 
     $('#test_jiaojuan').click(function () {
         let answerList = $("#answer-sheets").children();
-
+        alert(correctly);
         alert(`正确率： ${correctly*100/answerList.length}%`);
     })
 
