@@ -1,9 +1,9 @@
 /*nr start*/
-.test_main{width:1200px;  margin:15px auto 0;}
-.nr_left{width:900px; height:100%; float:left;}
+.test_main{width:80%;  margin:15px auto 0;}
+.nr_left{width:60%; height:100%; float:left;}
 
 .test{ width:100%;  border:1px solid #e4e4e4; text-align:left; float:left;}
-.test_title{width:900px; height:45px; line-height:45px; background-color:#f7f7f7;position:fixed; bottom:0; z-index:1000;}
+.test_title{width:60%; height:45px; line-height:45px; background-color:#f7f7f7;position:fixed; bottom:0; z-index:1000;}
 .test_title p{padding:0 20px; display:block; float:left;}
 .test_time{color:#f00; line-height:45px;}
 .test_time i{font-size:20px; height:45px; line-height:40px; display:block; float:left}
