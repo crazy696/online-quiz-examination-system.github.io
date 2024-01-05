@@ -5,6 +5,7 @@ $("#number2").text(datas.length)
 $("#number3").text(datas.length)
 
 var correctly = 0;
+var errornum = 0;
 console.log($('#questions-list').html)
 for(let i = 0; i < datas.length; i++) {
     if(datas[i].type == "单选题") {
@@ -129,6 +130,7 @@ $(function () {
                 $(`.0_user_answer_${examNum}`).css("color","red");
                 cardLi.removeClass('hasBeenAnswer');
                 cardLi.addClass('hasBeenAnswerMistake');
+                errornum++;
             }
         } else {
             let answer_dict = ["正确", "错误"]
@@ -144,13 +146,14 @@ $(function () {
                 $(`.0_user_answer_${examNum}`).css("color","red");
                 cardLi.removeClass('hasBeenAnswer');
                 cardLi.addClass('hasBeenAnswerMistake');
+                errornum++;
             }
         }
     });
 
     $('#test_jiaojuan').click(function () {
-        let answerList = $("#answer-sheets").children();
-        alert(`正确率： ${correctly*100/answerList.length}%`);
+        // let answerList = $("#answer-sheets").children();
+        alert(`正确率： ${correctly*100/(correctly+errornum)}%`);
     })
 
 });
