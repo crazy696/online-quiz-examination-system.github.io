@@ -3,7 +3,7 @@ $("#answer-sheets").html("");
 $("#number1").text(datas.length)
 $("#number2").text(datas.length)
 $("#number3").text(datas.length)
-
+datas = shuffle(datas);
 var correctly = 0;
 var errornum = 0;
 console.log($('#questions-list').html)
@@ -157,3 +157,13 @@ $(function () {
     })
 
 });
+
+
+function shuffle(arr) {
+  let newArr = [...arr];
+  for (let i = newArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+  }
+  return newArr;
+}
